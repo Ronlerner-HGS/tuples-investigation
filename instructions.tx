@@ -1,0 +1,246 @@
+Lesson: Investigating Lists, Numpy Arrays, Tuples, and Dictionaries in Python
+Objective:
+By the end of this lesson, students will be able to:
+Understand the differences between lists, numpy arrays, tuples, and dictionaries in Python.
+
+
+Learn how to use these data structures effectively in Python programming.
+
+
+Understand when and why to choose one data structure over another.
+
+
+
+1. Lists in Python
+Definition:
+A list is an ordered collection of items, which can be of any data type (integers, strings, other lists, etc.). Lists are mutable, meaning you can change their contents after the list is created.
+
+
+Syntax:
+my_list = [1, 2, 3, "apple", [4, 5]]
+
+Key Points:
+Ordered: The elements maintain their order.
+
+
+Mutable: You can modify elements (add, remove, or change them).
+
+
+Heterogeneous: Lists can store items of different data types.
+
+
+Nested Lists: A list can contain another list as an element.
+
+
+Examples:
+
+# List of numbers
+numbers = [1, 2, 3, 4]
+
+# Adding an element
+numbers.append(5)
+
+# Modifying an element
+numbers[2] = 10
+
+# Nested list
+nested_list = [1, [2, 3], 4]
+print(nested_list[1])  # Output: [2, 3]
+
+Coding Challenge 1:
+Create a list of 5 of your favorite fruits and print the list. Add a new fruit to the list, then remove one fruit, and print the updated list.
+
+
+Coding Challenge 2:
+Create a nested list where the first element is a number, the second element is another list of 3 integers, and the third element is a string. Access and print the second integer in the nested list.
+
+
+
+2. Numpy Arrays in Python
+Definition:
+Numpy arrays are more efficient than lists when working with large amounts of numerical data. They are a part of the numpy library and support multi-dimensional arrays and matrices, as well as a large collection of mathematical operations.
+
+
+Syntax:
+
+import numpy as np
+
+my_array = np.array([1, 2, 3, 4, 5])
+
+Key Points:
+Ordered: Numpy arrays are ordered collections.
+
+
+Mutable: You can change the elements in a numpy array.
+
+
+Homogeneous: All elements in a numpy array must be of the same type (e.g., all integers or all floats).
+
+
+Efficient: Numpy arrays are optimized for performance, particularly when performing operations over large datasets.
+
+
+Examples:
+
+import numpy as np
+
+# Create a numpy array
+arr = np.array([1, 2, 3, 4, 5])
+
+# Perform operations
+arr = arr * 2  # Multiply each element by 2
+print(arr)  # Output: [2 4 6 8 10]
+
+# Accessing an element
+print(arr[3])  # Output: 8
+
+# Slicing an array
+print(arr[1:4])  # Output: [4 6 8]
+
+Coding Challenge 1:
+Create a numpy array with 6 numbers (e.g., [5, 10, 15, 20, 25, 30]). Multiply the entire array by 2 and print the result.
+
+
+Coding Challenge 2:
+Create a 2D numpy array of shape (2, 3) with numbers from 1 to 6 (use np.array()) and print the sum of all the elements in the array.
+
+
+
+3. Tuples in Python
+Definition:
+A tuple is an ordered collection similar to a list, but it is immutable, meaning once a tuple is created, its elements cannot be changed, added, or removed.
+
+
+Syntax:
+my_tuple = (1, 2, 3, 4)
+
+Key Points:
+Ordered: Tuples maintain the order of elements.
+
+
+Immutable: You cannot modify a tuple after it is created.
+
+
+Heterogeneous: Tuples can store elements of different types.
+
+
+Efficient: Tuples use less memory than lists because they are immutable.
+
+
+Examples:
+python
+Copy
+# Tuple of numbers
+my_tuple = (10, 20, 30)
+
+# Accessing an element
+print(my_tuple[1])  # Output: 20
+
+# Nested tuple
+nested_tuple = (1, (2, 3), 4)
+print(nested_tuple[1])  # Output: (2, 3)
+
+Coding Challenge 1:
+Create a tuple of 4 different countries and print the tuple. Then, access and print the third country.
+
+
+Coding Challenge 2:
+Create a nested tuple with 3 items: a string, a tuple of 2 numbers, and a list of 3 integers. Access and print the first item from the nested tuple.
+
+
+
+4. Dictionaries in Python
+Definition:
+A dictionary is an unordered collection of key-value pairs. Each key must be unique, and you access the values using the keys, not indices.
+
+
+Syntax:
+
+my_dict = {"name": "Alice", "age": 25}
+
+Key Points:
+Unordered: Dictionaries do not maintain the order of elements.
+
+
+Mutable: You can change, add, or remove key-value pairs.
+
+
+Keys are unique: Each key must be unique, and it is used to access the corresponding value.
+
+
+Efficient lookup: Dictionaries provide fast lookups by key.
+
+
+Examples:
+
+# Dictionary of a person's information
+person = {"name": "Alice", "age": 25, "city": "New York"}
+
+# Accessing a value by key
+print(person["name"])  # Output: Alice
+
+# Adding a new key-value pair
+person["job"] = "Engineer"
+
+# Removing a key-value pair
+del person["age"]
+
+Coding Challenge 1:
+Create a dictionary to store a person's information (name, age, and city). Add a new key-value pair for their marital status and also one for citizenship and print the dictionary.(bonus if you can use the input function here)
+
+
+Coding Challenge 2:
+Create a dictionary where each key represents a student's name and the corresponding value is their grade. Add three students and their grades, then print the dictionary. Afterward, change one student's grade and print the updated dictionary.
+
+
+
+5. General Practice Challenges
+After practicing the individual sections, try solving these general coding challenges:
+5. General Practice Challenges
+Challenge 1:
+Easy:
+ Create a list with numbers from 1 to 10. Use a numpy array to multiply all elements of the list by 5, then print the numpy array.
+
+
+Challenge 2:
+Easy:
+ Create a tuple with three nested lists. Each nested list should contain two numbers. Access and print the first number from each nested list in the tuple.
+
+
+Challenge 3:
+Easy to Medium:
+ Create a dictionary where the keys represent students' names, and the values represent their grades (a list of 3 numbers). Add 3 students and their grades. Then, print the average grade for each student.
+
+
+Challenge 4:
+Medium:
+ Given a list of strings ['apple', 'banana', 'cherry', 'date'], create a numpy array of the lengths of these strings. Afterward, create a new array where each length is multiplied by 2, and print the resulting numpy array.
+
+
+Challenge 5:
+Medium:
+ Create a nested dictionary where the outer dictionary has keys 'Math', 'Science', and 'History', and the values are dictionaries of students' names and their grades in those subjects. Print the grade of a specific student in one of the subjects.
+
+
+Challenge 6:
+Medium to Hard:
+ Create a list of tuples, where each tuple contains a student's name and their list of 3 grades. Calculate and print the average grade of each student, and return the name of the student with the highest average grade.
+
+
+Challenge 7:
+Hard:
+ Create a 2D numpy array that represents a matrix (e.g., 3x3) of student scores. Write a function that takes this matrix as input and returns the highest score and the student’s name who obtained that score. (Assume each row represents a student’s scores for different subjects.)
+
+
+Challenge 8:
+Hard:
+ Create a dictionary of dictionaries, where each student’s dictionary contains their name, age, and a list of grades. Write a function that takes this dictionary and finds the student with the highest average grade. If multiple students share the highest average grade, return all their names.
+
+
+
+Conclusion:
+Today, we’ve learned about four essential data structures in Python: lists, numpy arrays, tuples, and dictionaries. Each of these structures serves different purposes and offers various advantages based on the task at hand.
+
+
+By practicing with the coding challenges and understanding when to use each data structure, you'll improve your Python programming skills and your ability to choose the right tools for the job.
+
